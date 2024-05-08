@@ -1,16 +1,26 @@
 package ecommerce;
 
 import java.util.Scanner;
+import ecommerce.model.ItemParteDeCima;
+import ecommerce.model.ItemParteDeBaixo;
 
 public class Menu {
 
 	public static void main(String[] args) {
-		
-		Scanner read = new Scanner(System.in);
-		
+
 		int option;
-		
-	while (true) {
+
+		Scanner read = new Scanner(System.in);
+
+		// Teste da classe ItemBaixo
+		ItemParteDeBaixo itb1 = new ItemParteDeBaixo(2, 8, 2, "Calça", "Arara", 50.0f, "Jeans");
+		itb1.visualizar();
+
+		// Teste da classe ItemCima
+		ItemParteDeCima itc1 = new ItemParteDeCima(3, 10, 1, "Jaqueta", "BilaBom", 50.0f, "Longa");
+		itc1.visualizar();
+
+		while (true) {
 
 			System.out.println("*****************************************************");
 			System.out.println("                GenE-COMMERCE			             ");
@@ -24,15 +34,15 @@ public class Menu {
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opcao desejada:                          ");
 			System.out.println("                                                     ");
-			
+
 			option = read.nextInt();
-			
+
 			if (option == 0) {
 				System.out.println("\nGenE-Commerce - Tenha um Ótimo Dia!");
 				read.close();
 				System.exit(0);
 			}
-			
+
 			switch (option) {
 			case 1:
 				System.out.println("Listar todos os Itens\n\n");
@@ -57,13 +67,13 @@ public class Menu {
 			default:
 				System.out.println("\nOpção Inválida!\n");
 				break;
+			}
 		}
+
 	}
 
-}
-	
 	public static void sobre() {
-		System.out.println("\n*********************************************************");
+		System.out.println("\n*******************************************************");
 		System.out.println("Projeto Desenvolvido por: Anderson Alves ");
 		System.out.println("Generation Brasil - ");
 		System.out.println("github.com/");
