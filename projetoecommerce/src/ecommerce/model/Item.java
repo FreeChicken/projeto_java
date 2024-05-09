@@ -4,7 +4,7 @@ public abstract class Item {
 	
 	private int idItem;
 	private int quantidade;
-	private int tipo;//camisetas, calcas
+	private int tipo;//camisetas, calcas...
 	private String nomeDoItem;
 	private String marca;
 	private float precoItem;
@@ -153,9 +153,9 @@ public abstract class Item {
 		System.out.println("\n\n*****************************************************");
 		System.out.println("Informaçoes do Item:");
 		System.out.println("*****************************************************");
-		System.out.println("ID do Item: " + this.idItem);
+		System.out.println("ID: " + this.idItem);
 		System.out.println("Tipo: " + tipo);
-		System.out.println("Nome do Item: " + this.nomeDoItem);
+		System.out.println("Nome: " + this.nomeDoItem);
 		System.out.println("Marca: " + this.marca);
 		System.out.println("Quantidade: " + quantidade);
 		System.out.println("Preço: " + this.precoItem);
